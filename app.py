@@ -12,7 +12,7 @@ def predict():
   y_pred = model.predict([[x]])[0]
   # Log prediction
   with open("output.txt", "w") as f:
-  f.write(f"Input x: {x}\nPrediction: {y_pred}\n")
+    f.write(f"Input x: {x}\nPrediction: {y_pred}\n")
   return jsonify({"x": x, "prediction": y_pred})
 if __name__ == "__main__":
   app.run(host="0.0.0.0", port=5000)
